@@ -2,7 +2,16 @@
 
 A portable knowledge base of my best AI-coding videos — **Claude Code, context engineering, the PIV loop, the AI layer, and the new Archon harness builder** — in the **Open Knowledge Format (OKF)**: plain markdown any AI agent can read.
 
-> **To use it:** tell your AI coding assistant to **read this README from the repo URL (https://github.com/coleam00/cole-medin-ai-coding) and set up the bundle.** Then just start asking questions about anything I teach. Everything below is written for that agent.
+## How to use it
+
+Paste this to your AI coding assistant (Claude Code, Cursor, Codex, Gemini CLI, …):
+
+```
+Here's a knowledge bundle: https://github.com/coleam00/cole-medin-ai-coding
+Read its README and set it up so I can search over it. Then tell me what's inside.
+```
+
+That's it — your agent reads the rest of this README, clones the bundle, and you can start asking questions about anything I teach.
 
 ---
 
