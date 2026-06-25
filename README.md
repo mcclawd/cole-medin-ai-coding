@@ -1,46 +1,52 @@
 # Cole Medin — AI-Coding Knowledge Bundle
 
-A portable knowledge base of my best videos on AI coding — **Claude Code, context engineering, the PIV loop, the AI layer, and the new Archon harness builder**. It's plain markdown that any AI coding agent can read, so you don't watch the videos — your AI does, and you just ask.
+A portable knowledge base of my best AI-coding videos — **Claude Code, context engineering, the PIV loop, the AI layer, and the new Archon harness builder** — in the **Open Knowledge Format (OKF)**: plain markdown any AI agent can read.
 
-## How to use it
-
-Give this repo's URL to your AI coding assistant (Claude Code, Cursor, Codex, Gemini CLI, …), tell it to clone the bundle, and start asking questions. Paste this to your agent:
-
-```
-Clone https://github.com/coleam00/cole-medin-ai-coding into this project, read its index.md,
-and use the bundle to answer my questions about AI coding.
-Start by telling me what's inside.
-```
-
-Then ask anything I cover — *"How does the PIV loop work?"*, *"What is the new Archon harness builder?"*, *"How do I use context engineering with PRPs?"* — and your agent will navigate the bundle and answer, pointing you to the exact video.
-
-## What's inside
-
-- `index.md` — start here; the table of contents
-- `videos/` — one page per video (summary, key ideas, tools, link)
-- `concepts/` — the cross-cutting themes that tie the videos together
-- `log.md` — change history
+> **To use it:** tell your AI coding assistant to **read this README from the repo URL (https://github.com/coleam00/cole-medin-ai-coding) and set up the bundle.** Then just start asking questions about anything I teach. Everything below is written for that agent.
 
 ---
 
-<details>
-<summary><b>🤖 Instructions for your AI agent — how to read this bundle</b></summary>
+## Agent setup instructions
 
-_The text below is for the AI assistant you handed this to, not for you. It explains the format and how to navigate it._
+You're being asked to make this knowledge bundle available so the user can ask questions about Cole Medin's AI-coding content. Follow these steps.
 
-**What this is.** This repo is an [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog) bundle — a directory of markdown files, each with a small YAML frontmatter block, that you read **directly**. No SDK, no database, no embeddings, no special tooling. If you can read a file, you can use this knowledge base.
+### 1. What this is
 
-**How to navigate it (progressive disclosure — do NOT load everything):**
+This repo is an [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog) bundle — a folder of markdown files, each with a small YAML frontmatter block, navigated via `index.md`. You read it **directly**: no database, no embeddings, no API, no special tooling. It also ships a tiny, dependency-free CLI — `okf.py` (Python standard library only) — for fast navigation and search.
 
-1. Read `index.md` at the repo root first. It's the catalog.
-2. From there, read `videos/index.md` and `concepts/index.md` to see what's available (each entry has a one-line description).
-3. Open only the specific `videos/<slug>.md` or `concepts/<slug>.md` pages relevant to the user's question — not the whole bundle.
-4. Pages cross-link with relative markdown links; follow them between a video and the concepts it teaches (and vice-versa).
+### 2. Set it up
 
-**Reading a page.** Each page's frontmatter has a `type` (`video` or `concept`), a `title`, a `description`, `tags`, and — for videos — a `resource` field with the YouTube URL. When you answer, cite the source video by its title and `resource` URL.
+Clone the repo into the current working directory:
 
-**To answer a question:** read `index.md` → pick the relevant pages from the two index files → read those pages → answer, grounded in them, and link the video(s) you used. This is read-only reference knowledge — don't modify the bundle.
+```bash
+git clone https://github.com/coleam00/cole-medin-ai-coding
+cd cole-medin-ai-coding
+python okf.py index      # confirm it works — prints the table of contents
+```
 
-</details>
+### 3. Use the CLI
+
+- `python okf.py index [subpath]` — print an index (start at the root; e.g. `python okf.py index videos`)
+- `python okf.py find "<query>"` — ranked keyword search across the bundle
+- `python okf.py read <path>` — print a page, e.g. `python okf.py read concepts/the-piv-loop`
+
+(You can also just open the markdown files directly — `okf.py` is only a convenience.)
+
+### 4. How to answer the user's questions
+
+1. `python okf.py find "<the user's topic>"` (or read `index.md`) to locate the relevant pages.
+2. `python okf.py read` the specific `videos/<slug>` or `concepts/<slug>` pages — only what's relevant, not the whole bundle (progressive disclosure).
+3. Follow the relative markdown links between a video and the concepts it teaches.
+4. Answer grounded in those pages, and **cite the source video** by its title and `resource` (YouTube URL) from the frontmatter.
+
+This is read-only reference knowledge — don't modify the bundle.
+
+## What's inside
+
+- `index.md` — the table of contents (start here)
+- `videos/` — one page per video (summary, key ideas, tools, link)
+- `concepts/` — the cross-cutting themes that tie the videos together
+- `okf.py` — the dependency-free navigation/search CLI
+- `log.md` — change history
 
 Channel: https://www.youtube.com/@ColeMedin
