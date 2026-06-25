@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""okf.py — a tiny, dependency-free CLI to navigate and search this OKF bundle.
+"""okf-cli.py - a tiny, dependency-free CLI to navigate and search this OKF bundle.
 
 This repo is an Open Knowledge Format (OKF) bundle: just markdown files with YAML
-frontmatter, navigated via index.md. You can read the files directly — this CLI
+frontmatter, navigated via index.md. You can read the files directly; this CLI
 just makes search and navigation one command. Standard library only; no installs.
 
 Run it from anywhere (it always operates on the folder it lives in):
 
-    python okf.py index [subpath]     # print an index.md (start at the root)
-    python okf.py read <path>         # print a page (e.g. concepts/the-piv-loop)
-    python okf.py find "<query>"      # ranked keyword search across the bundle
+    python okf-cli.py index [subpath]     # print an index.md (start at the root)
+    python okf-cli.py read <path>         # print a page (e.g. concepts/the-piv-loop)
+    python okf-cli.py find "<query>"      # ranked keyword search across the bundle
 """
 from __future__ import annotations
 
@@ -52,7 +52,7 @@ def cmd_index(args: list[str]) -> int:
     if idx.exists():
         print(idx.read_text(encoding="utf-8"))
         return 0
-    print(f"(no index.md in {sub or '<root>'} — synthesizing a listing)\n")
+    print(f"(no index.md in {sub or '<root>'}; synthesizing a listing)\n")
     for c in sorted(target.iterdir()):
         if c.is_dir():
             print(f"* {c.name}/")
@@ -63,7 +63,7 @@ def cmd_index(args: list[str]) -> int:
 
 def cmd_read(args: list[str]) -> int:
     if not args:
-        print("usage: python okf.py read <path>   (e.g. concepts/the-piv-loop)")
+        print("usage: python okf-cli.py read <path>   (e.g. concepts/the-piv-loop)")
         return 1
     rel = args[0] if args[0].endswith(".md") else f"{args[0]}.md"
     p = _safe(rel)
@@ -85,7 +85,7 @@ def cmd_find(args: list[str]) -> int:
         i += 1
     needles = [t.lower() for t in " ".join(terms).split() if t.strip()]
     if not needles:
-        print('usage: python okf.py find "<query>"')
+        print('usage: python okf-cli.py find "<query>"')
         return 1
 
     hits: list[tuple[int, str, str]] = []

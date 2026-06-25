@@ -1,6 +1,6 @@
 ---
 type: concept
-title: Archon — the Open-Source Harness Builder
+title: Archon - the Open-Source Harness Builder
 tags:
 - archon
 - harness
@@ -12,20 +12,20 @@ related_videos:
 - principled-agentic-engineer
 timestamp: '2026-06-25'
 description: 'The new Archon: an open-source workflow/harness engine that sits ABOVE
-  coding agents and orchestrates them with reusable YAML workflows — making AI coding
+  coding agents and orchestrates them with reusable YAML workflows - making AI coding
   deterministic and repeatable.'
 ---
 
-# Archon — the Open-Source Harness Builder
+# Archon - the Open-Source Harness Builder
 
 Archon was rewritten. The new Archon is **the first open-source harness builder
-for AI coding** — a workflow engine whose goal is to make AI coding *deterministic
+for AI coding** - a workflow engine whose goal is to make AI coding *deterministic
 and repeatable*. (The old RAG-knowledge-base + Kanban-task "command center" Archon
-is archived on a `v1-task-management-rag` branch — that is **not** what this is.)
+is archived on a `v1-task-management-rag` branch - that is **not** what this is.)
 
 The framing is the evolution **prompt engineering → context engineering → harness
 engineering**: a *harness* is the tooling/prompting/chaining layer above a coding
-agent that makes it reliable. Cole cites the gap bluntly — a bare model lands a
+agent that makes it reliable. Cole cites the gap bluntly - a bare model lands a
 small fraction of PRs, a good harness lands the large majority; Stripe ships
 ~1,300 AI-only PRs a week behind a harness; a large share of Anthropic's own
 codebase is harness code.
@@ -37,7 +37,7 @@ rather than (like the old one) being a tool wired *into* a single assistant.
   sent to a coding-agent session or a *deterministic command* (context creation,
   validation, git ops) you don't leave to the agent's discretion.
 - **The hybrid secret:** mix deterministic steps with AI steps, plus
-  human-in-the-loop approval gates — e.g. the plan → implement-in-loop → test →
+  human-in-the-loop approval gates - e.g. the plan → implement-in-loop → test →
   review → human-approve → open-PR pipeline.
 - **Per-node control** of provider, model (cheap Haiku for classification, Sonnet
   for research), context injection, and fresh-vs-continued session.
@@ -46,7 +46,7 @@ rather than (like the old one) being a tool wired *into* a single assistant.
 
 It ships a Claude Code skill and default workflows (fix-GitHub-issue, idea-to-PR,
 PR review, interactive PRD, the Ralph loop) plus a meta workflow-builder workflow.
-This is the layer that **automates the PIV loop and the AI layer** Cole teaches —
+This is the layer that **automates the PIV loop and the AI layer** Cole teaches -
 turning a hand-run process into one you can execute reliably on demand.
 
 # Videos on this

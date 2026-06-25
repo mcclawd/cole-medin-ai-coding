@@ -17,13 +17,13 @@ description: Model Context Protocol is the standard wiring Cole uses to plug kno
 # MCP as the Integration Layer for AI Coding
 
 Across Cole's AI-coding content, **MCP (Model Context Protocol)** is the recurring
-integration layer — the standard way an assistant reaches outside its own context
+integration layer - the standard way an assistant reaches outside its own context
 to tools and external systems. His MCP content is always *applied*: the three core
 MCP servers in his workflow (filesystem, web search, and git), and connecting any
 MCP-compatible assistant with a single copy-paste command.
 
 The consistent pattern: wire up an MCP server once, and *any* MCP-compatible
-assistant — Claude Code, Cursor, Windsurf, Codex — can use it immediately. Because
+assistant - Claude Code, Cursor, Windsurf, Codex - can use it immediately. Because
 slash commands are just prompts and MCP is a shared standard, the whole workflow
 is assistant-agnostic; Claude Code is simply Cole's current preference.
 

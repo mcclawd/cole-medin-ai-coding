@@ -12,19 +12,19 @@ related_videos:
 - code-100x-faster-with-ai
 timestamp: '2026-06-25'
 description: 'Cole''s signature thesis: AI coding assistants fail from missing context,
-  not weak models — so engineer the context up front.'
+  not weak models - so engineer the context up front.'
 ---
 
 # Context Engineering & the PRP Framework
 
 The idea Cole's whole approach is built on: an AI coding assistant almost never
-fails because the model is too weak — it fails because it was given too little of
+fails because the model is too weak - it fails because it was given too little of
 the right context. **Context engineering** is a superset of prompt engineering:
 instead of tweaking words on a single prompt, you hand the assistant everything
-it needs up front — architecture, project rules, concrete examples, and
+it needs up front - architecture, project rules, concrete examples, and
 validation criteria.
 
-The central artifact is the **PRP (Product Requirements Prompt)** — "a PRD +
+The central artifact is the **PRP (Product Requirements Prompt)** - "a PRD +
 curated codebase intelligence + agent runbook," the minimum viable packet an AI
 needs to ship production code on the first pass. Context engineering is the middle
 beat of the broader arc Cole teaches: **prompt engineering → context engineering →

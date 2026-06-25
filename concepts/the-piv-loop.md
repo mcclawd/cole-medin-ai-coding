@@ -14,27 +14,27 @@ related_videos:
 - harness-engineering-archon
 timestamp: '2026-06-25'
 description: 'Cole''s core operating loop: you own the planning and validation, the
-  agent owns the implementation — you stay in the driver''s seat.'
+  agent owns the implementation - you stay in the driver''s seat.'
 ---
 
 # The PIV Loop (Plan → Implement → Validate)
 
 The discipline at the center of Cole's system. The engineer's job has shifted
-from writing code to the higher-leverage work of **planning and validating** —
+from writing code to the higher-leverage work of **planning and validating** -
 and crucially this is *not* vibe coding, because a human stays in the driver's
 seat through every plan and every validation gate.
 
 The loop is **Plan → Implement → Validate**, run once per ticket:
 
-- **Plan** in two layers — Layer 1 is project/PM-level (high-level features and
+- **Plan** in two layers - Layer 1 is project/PM-level (high-level features and
   bugs, no code); Layer 2 is task-level (dig into the codebase, find the files to
   touch). Both start as an unstructured brain dump, then move to structure; the
   key skill is having the agent ask clarifying questions one at a time to reduce
   its assumptions.
 - **Implement** in a *fresh* session, separate from planning, so the agent comes
-  in with unbiased eyes. Use sub-agents for research to manage context — they can
+  in with unbiased eyes. Use sub-agents for research to manage context - they can
   burn 100k+ tokens exploring and return a few-thousand-token summary.
-- **Validate** — the agent runs its own tests, linting, type-checking, even
+- **Validate** - the agent runs its own tests, linting, type-checking, even
   end-to-end browser testing, while the human reviews every artifact (PRD, plan,
   code). "Just because you can fit a million tokens doesn't mean you should."
 
