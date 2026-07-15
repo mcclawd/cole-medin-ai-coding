@@ -1,5 +1,7 @@
 # Cole Medin - AI-Coding Knowledge Bundle
 
+[![BundleDex](https://bundledex.net/badge/cole-medin-ai-coding.svg)](https://bundledex.net/bundles/cole-medin-ai-coding/)
+
 A portable knowledge base of my best AI-coding videos - **Claude Code, context engineering, the PIV loop, the AI layer, and the new Archon harness builder** - in the **Open Knowledge Format (OKF)**: plain markdown any AI agent can read.
 
 ## How to use it
