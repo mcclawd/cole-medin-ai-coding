@@ -61,3 +61,5 @@ This is read-only reference knowledge - don't modify the bundle.
 - `log.md` - change history
 
 Channel: https://www.youtube.com/@ColeMedin
+
+[![OKF BundleDex](https://bundledex.net/static-badge.svg)](https://bundledex.net)
